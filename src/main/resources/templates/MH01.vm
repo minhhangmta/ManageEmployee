@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>EmployeeManager</title>
+</head>
+<body>
+    <form action="login" method="post">
+        <div align="center">
+            <p style="font-weight: bold; font-size: 20px;">Đăng nhập hệ thống</p>
+            <p></p>
+            <table style="width: 330px">
+                #if($listErr!=$null)
+                    #foreach($err in $listErr)
+                        <tr>
+                            <td colspan="2" style="font-weight: bold; color: #FF0000;">$err</p>
+                        </tr>
+                    #end
+                #end
+                <tr>
+                    <td>Tên đăng nhập</td>
+                    <td><input type="text" size="20" name="loginname"
+                        value="#if($loginname!=$null)$loginname#else#end"></td>
+                </tr>
+                <tr>
+                    <td >Mật khẩu</td>
+                    <td><input type="password" size="20" name="password"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center"><input type="submit" value="Đăng nhập"></td>
+                </tr>
+            </table>
+        </div>
+    </form>
+</body>
+</html>

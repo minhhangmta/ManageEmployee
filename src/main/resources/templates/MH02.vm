@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>List</title>
+
+</head>
+<body>
+    #parse("Header.vm")
+    <div align="center">
+        <p>Danh Sách Nhân Viên</p>
+        <table border="1" width="70%">
+            <tbody>
+                <tr align="center">
+                    <td>name</td>
+                    <td>address</td>
+                    <td>phone</td>
+                    <td>email</td>
+                    <td>birthday</td>
+                    <td>level</td>
+                </tr>
+                #foreach($employeeInfo in $employeeInfoList)
+                    <tr align="center">
+                        <td>$employeeInfo.name</td>
+                        <td>$employeeInfo.address</td>
+                        <td>$employeeInfo.phone</td>
+                        <td>$employeeInfo.email</td>
+                        <td>$employeeInfo.birthday</td>
+                        <td>$employeeInfo.level</td>
+                    </tr>
+                #end
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
